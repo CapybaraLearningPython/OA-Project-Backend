@@ -47,7 +47,7 @@ class OAUser(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     is_staff = models.BooleanField(default=True)
     status = models.IntegerField(
-        choices=UserStatusChoices, 
+        choices=UserStatusChoices.choices, 
         default=UserStatusChoices.UNACTIVATED
     )
     date_joined = models.DateField(auto_now_add=True)

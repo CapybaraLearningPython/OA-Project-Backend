@@ -29,7 +29,7 @@ class Attendance(models.Model):
         related_name='sub_requests'
     )
     status = models.IntegerField(
-        choices=RequestStatus, 
+        choices=RequestStatus.choices, 
         default=RequestStatus.UNDER_REVIEW
     )
     leave_start = models.DateField()
