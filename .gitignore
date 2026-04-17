@@ -1,4 +1,4 @@
-oab_venv/
+oab_env/
 env/
 pycache/
 *.pyc
