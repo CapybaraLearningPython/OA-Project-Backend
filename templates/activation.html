@@ -63,16 +63,17 @@
 
 <body>
     <div class="card">
-        <div class="title">账户激活成功</div>
+        <div class="title">账户激活</div>
         <div class="desc">
-            你的 OA 系统账户已成功激活，可以使用账号登录系统。
+            {{ message }}
         </div>
 
+        {% if activated %}
         <a class="btn" href="http://localhost:5173/#/login">进入登录页面</a>
-
         <div class="footer">
             如无法跳转，请联系系统管理员
         </div>
+        {% endif %}
     </div>
 </body>
 </html>

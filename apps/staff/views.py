@@ -113,14 +113,30 @@ class EmployeeActivationView(View):
             employee = auth_models.OAUser.objects.get(uid=uid)
             employee.status = auth_models.UserStatusChoices.ACTIVATED
             employee.save()
+            return render(
+                request, 
+                'activation.html', 
+                {'message': '您的OA系统账户已成功激活！', 'activated': True},
+            )
         except jwt.ExpiredSignatureError:
-            return JsonResponse({'detail': '链接已过期!'}, status=400)
+            return render(
+                request, 
+                'activation.html', 
+                {'message': '您的激活链接已过期，请联系管理员处理'},
+            )
         except jwt.InvalidTokenError:
-            return JsonResponse({'detail': '无效链接!'}, status=400)
+            return render(
+                request, 
+                'activation.html', 
+                {'message': '您的激活链接无效，请联系管理员处理'},
+            )
         except auth_models.OAUser.DoesNotExist:
-            return JsonResponse({'detail': '用户不存在!'}, status=400)
+            return render(
+                request, 
+                'activation.html', 
+                {'message': '您要激活的用户不存在，请联系管理员处理'},
+            )
         
-        return render(request, 'activation_successful.html')
     
 class StaffUploadView(APIView):
     def post(self, request):

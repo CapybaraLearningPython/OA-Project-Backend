@@ -4599,3 +4599,17 @@ smtplib.SMTPServerDisconnected: Connection unexpectedly closed
 2026-04-17 10:45:03,297 - celery.app.trace - INFO - Task apps.staff.tasks.send_email[04963ec2-9104-4b2b-a69b-83b2a8090a48] succeeded in 3.1769067079999997s: None
 2026-04-17 10:45:36,365 - celery.worker.strategy - INFO - Task apps.staff.tasks.send_email[bd7d0ccb-6d5d-4860-b171-efd7eaf6129d] received
 2026-04-17 10:45:39,421 - celery.app.trace - INFO - Task apps.staff.tasks.send_email[bd7d0ccb-6d5d-4860-b171-efd7eaf6129d] succeeded in 3.0532647499999968s: None
+2026-04-19 05:07:45,911 - celery.worker.consumer.connection - INFO - Connected to redis://127.0.0.1:6379/1
+2026-04-19 05:07:45,914 - celery.worker.consumer.mingle - INFO - mingle: searching for neighbors
+2026-04-19 05:07:46,921 - celery.worker.consumer.mingle - INFO - mingle: all alone
+2026-04-19 05:07:46,934 - celery.apps.worker - INFO - celery@192.168.10.3 ready.
+2026-04-19 05:23:36,970 - celery.worker.consumer.connection - INFO - Connected to redis://127.0.0.1:6379/1
+2026-04-19 05:23:36,971 - celery.worker.consumer.mingle - INFO - mingle: searching for neighbors
+2026-04-19 05:23:37,977 - celery.worker.consumer.mingle - INFO - mingle: all alone
+2026-04-19 05:23:37,988 - celery.apps.worker - INFO - celery@192.168.10.3 ready.
+2026-04-19 05:24:11,099 - celery.worker.strategy - INFO - Task apps.staff.tasks.send_email[9aed46cb-7126-4556-8876-9a77a89661b8] received
+2026-04-19 05:24:14,226 - celery.app.trace - INFO - Task apps.staff.tasks.send_email[9aed46cb-7126-4556-8876-9a77a89661b8] succeeded in 3.1240055000000027s: None
+2026-04-19 05:27:26,851 - celery.worker.strategy - INFO - Task apps.staff.tasks.send_email[151d496c-c734-4ed4-a265-73d7fa5b0e7f] received
+2026-04-19 05:27:29,921 - celery.app.trace - INFO - Task apps.staff.tasks.send_email[151d496c-c734-4ed4-a265-73d7fa5b0e7f] succeeded in 3.0650184589999867s: None
+2026-04-19 05:28:33,479 - celery.worker.strategy - INFO - Task apps.staff.tasks.send_email[de9f7ef1-d74a-4342-865a-be97c0c8eab7] received
+2026-04-19 05:28:36,440 - celery.app.trace - INFO - Task apps.staff.tasks.send_email[de9f7ef1-d74a-4342-865a-be97c0c8eab7] succeeded in 2.959398999999962s: None
